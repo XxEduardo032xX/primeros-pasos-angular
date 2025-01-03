@@ -1,0 +1,34 @@
+
+
+<div class="container">
+
+    <h1>Nombre:</h1>
+    <b>{{Name}}</b>
+
+    <hr>
+
+    <h1>Age</h1>
+    <b>{{Age}}</b>
+
+    <hr>
+
+    <h1>Metodo:</h1>
+    <b>{{methodPerson}}</b>
+
+    <hr>
+
+    <h1>Capitalizado:</h1>
+    <b>Capitalizado perosn</b>
+
+    <hr>
+
+
+    <!--* Cada vez que vas a mandar cadenas a un metodo de un evento, siempre metele comillas '' o `` xq si colocas "", el evento click
+    <!--* probablemente tambien tenga "" lo cual ocasionara un error -->
+    <button 
+    *ngIf="Name !== 'sebas'"
+    (click)="changeName('sebas')" 
+    class="btn btn-primary">Cambiar nombre</button>
+    <button (click)="changeAge(50)" class="btn btn-primary">Cambiar edad</button>
+
+</div>

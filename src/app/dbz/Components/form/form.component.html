@@ -1,0 +1,25 @@
+<h3>Formulario:</h3>
+
+<form class="row" (ngSubmit)="emitMessage()">
+
+    <input type="text" 
+    [(ngModel)]="character.name"
+    name="name"
+    class="form-control" 
+    placeholder="Ingrese el personaje">
+
+
+    <input type="text" 
+    [(ngModel)]="character.power"
+    name="power"
+    class="form-control mt-2" 
+    placeholder="Ingrese el poder">
+
+    <button class="btn btn-primary" type="submit">Enviar datos</button>
+
+</form>
+
+<!--* Esta wuea de aqui "| json" se le conoce como un pipe json, el cual construye el objeto como se -->
+<!--* queria ver  -->
+<pre>{{character | json}} </pre>
+

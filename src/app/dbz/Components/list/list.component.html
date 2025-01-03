@@ -1,0 +1,20 @@
+<h3>Listado</h3>
+<ul class="list-group">
+    <!--* No funciona la desestructuracion de objetos aqui en el ngfor  -->
+    <li *ngFor="
+    let personajeDbz of characterList; 
+    let i = index;
+    let isFirst = first;
+    let isLast = last;
+    let isEven = even;
+    let isOdd = odd" 
+    class="list-group-item d-flex justify-content-between align-items-center"
+    [ngClass]="{'list-group-item-warning': isFirst}">
+        <div>
+            <span>{{i + 1}}. {{personajeDbz.name}}</span>
+            <span>---</span>
+            <span>{{personajeDbz.power}} </span>
+        </div>
+        <button class="btn btn-danger" (click)="onDeleteButton(personajeDbz.id || '')">Delete</button>
+    </li>
+</ul>

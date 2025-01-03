@@ -1,0 +1,16 @@
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col mt-2">
+            <app-dbz-list [characterList]="characters" (onDeleteChange)="onDeleteCharacter($event)"></app-dbz-list>
+        </div>
+
+        <div class="col mt-2">
+            <app-dbz-form (onNewCharacter)="onNewChacterDbzMain($event)"></app-dbz-form>
+        </div>
+
+    </div>
+
+</div>
